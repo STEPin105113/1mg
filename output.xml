@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210125 18:18:31.981" rpa="false">
+<suite id="s1" name="1mg Project" source="C:\Robot_framework\Robot_workspace\1mg_Project">
+<suite id="s1-s1" name="Validation Suite" source="C:\Robot_framework\Robot_workspace\1mg_Project\validation_suite.robot">
+<test id="s1-s1-t1" name="TC1_validation">
+<kw name="Launch Browser" library="common_functionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+</arguments>
+<msg timestamp="20210125 18:18:32.561" level="INFO">Environment variable 'path' set to value 'C:/Users/CTEA/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin/server;C:/Users/CTEA/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\python;C:\python\Scripts;C:\xampp\mysql\bin;C:\Program Files\Git\cmd;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Groovy\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Groovy;C:\Program Files (x86)\Groovy\bin;C:\Program Files\Java\jdk1.8.0_271\bin;C:\Users\CTEA\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs\;;C:\Users\CTEA\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\CTEA\AppData\Local\Microsoft\WindowsApps;C:\Users\CTEA\AppData\Roaming\npm;C:\WINDOWS\system32;;C:\Robot_framework\Robot_workspace\1mg_Project\driver'.</msg>
+<status status="PASS" starttime="20210125 18:18:32.560" endtime="20210125 18:18:32.561"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser= ${BROWSER_NAME}</arg>
+<arg>options=add_argument("--disable-notifications")</arg>
+</arguments>
+<msg timestamp="20210125 18:18:32.563" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210125 18:18:32.562" endtime="20210125 18:18:36.742"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210125 18:18:36.742" endtime="20210125 18:18:38.914"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210125 18:18:38.914" endtime="20210125 18:18:38.918"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${url}</arg>
+</arguments>
+<msg timestamp="20210125 18:18:38.919" level="INFO">Opening url 'https://www.1mg.com/'</msg>
+<status status="PASS" starttime="20210125 18:18:38.918" endtime="20210125 18:19:23.127"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:18:32.559" endtime="20210125 18:19:23.128"></status>
+</kw>
+<kw name="alert handle" library="DashboardPage">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:19:23.130" level="INFO">Clicking element '//span[contains(@class,'style__close___1l-EN')]/*'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 18:19:54.538" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-94.png"&gt;&lt;img src="screenshot/selenium-screenshot-94.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210125 18:19:53.824" endtime="20210125 18:19:54.539"></status>
+</kw>
+<msg timestamp="20210125 18:19:54.543" level="FAIL">Element with locator '//span[contains(@class,'style__close___1l-EN')]/*' not found.</msg>
+<status status="FAIL" starttime="20210125 18:19:23.130" endtime="20210125 18:19:54.543"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:23.129" endtime="20210125 18:19:54.543"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:23.128" endtime="20210125 18:19:54.544"></status>
+</kw>
+<kw name="click on update" library="DashboardPage">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${UPDATE_LOCATOR}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${UPDATE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:19:54.547" level="INFO">Clicking element '//div[text()='Update']'.</msg>
+<status status="PASS" starttime="20210125 18:19:54.546" endtime="20210125 18:19:55.469"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:54.545" endtime="20210125 18:19:55.469"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:54.544" endtime="20210125 18:19:55.470"></status>
+</kw>
+<kw name="alert handle" library="DashboardPage">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:19:55.472" level="INFO">Clicking element '//span[contains(@class,'style__close___1l-EN')]/*'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 18:20:26.301" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-95.png"&gt;&lt;img src="screenshot/selenium-screenshot-95.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210125 18:20:25.632" endtime="20210125 18:20:26.302"></status>
+</kw>
+<msg timestamp="20210125 18:20:26.303" level="FAIL">Element with locator '//span[contains(@class,'style__close___1l-EN')]/*' not found.</msg>
+<status status="FAIL" starttime="20210125 18:19:55.472" endtime="20210125 18:20:26.304"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:55.471" endtime="20210125 18:20:26.304"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:19:55.470" endtime="20210125 18:20:26.304"></status>
+</kw>
+<kw name="click on covid prevention" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LABEL_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:20:26.306" level="INFO">Clicking element '(//i[@class='fa fa-angle-down drop-icon'])[2]'.</msg>
+<status status="PASS" starttime="20210125 18:20:26.305" endtime="20210125 18:20:26.753"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:20:26.305" endtime="20210125 18:20:26.754"></status>
+</kw>
+<kw name="click sanitizer" library="DashboardPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LABEL2_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:20:26.755" level="INFO">Clicking element '//span[contains(text(),'Sanitizers &amp; Handwash Products')]'.</msg>
+<status status="PASS" starttime="20210125 18:20:26.754" endtime="20210125 18:20:43.146"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:20:26.754" endtime="20210125 18:20:43.147"></status>
+</kw>
+<kw name="alert handle" library="DashboardPage">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:20:43.149" level="INFO">Clicking element '//span[contains(@class,'style__close___1l-EN')]/*'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 18:21:13.847" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-96.png"&gt;&lt;img src="screenshot/selenium-screenshot-96.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210125 18:21:13.215" endtime="20210125 18:21:13.847"></status>
+</kw>
+<msg timestamp="20210125 18:21:13.850" level="FAIL">Element with locator '//span[contains(@class,'style__close___1l-EN')]/*' not found.</msg>
+<status status="FAIL" starttime="20210125 18:20:43.149" endtime="20210125 18:21:13.850"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:20:43.148" endtime="20210125 18:21:13.851"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:20:43.147" endtime="20210125 18:21:13.851"></status>
+</kw>
+<kw name="click on dettol" library="NextPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PRODUCT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:21:13.853" level="INFO">Clicking element '//div[contains(text(),'Dettol')]'.</msg>
+<status status="PASS" starttime="20210125 18:21:13.852" endtime="20210125 18:21:26.882"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:21:13.852" endtime="20210125 18:21:26.883"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>//span[text()='Relevance']</arg>
+</arguments>
+<assign>
+<var>${ele}</var>
+</assign>
+<msg timestamp="20210125 18:21:27.164" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c300a4f6e8fc2bed8667202a2b9b54c9", element="da3f801d-a6c1-4c48-9bb6-da6546bf6798")&gt;</msg>
+<status status="PASS" starttime="20210125 18:21:26.883" endtime="20210125 18:21:27.164"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20210125 18:21:27.165" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="c300a4f6e8fc2bed8667202a2b9b54c9", element="da3f801d-a6c1-4c48-9bb6-da6546bf6798")&gt;'</msg>
+<status status="PASS" starttime="20210125 18:21:27.164" endtime="20210125 18:21:27.712"></status>
+</kw>
+<kw name="click on Price: Low to High" library="NextPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LABEL3_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:21:27.714" level="INFO">Clicking element '//li[text()='Price: Low to High']'.</msg>
+<status status="PASS" starttime="20210125 18:21:27.713" endtime="20210125 18:21:28.602"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:21:27.713" endtime="20210125 18:21:28.602"></status>
+</kw>
+<kw name="alert handle" library="DashboardPage">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ALERT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:21:28.604" level="INFO">Clicking element '//span[contains(@class,'style__close___1l-EN')]/*'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 18:21:59.216" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-97.png"&gt;&lt;img src="screenshot/selenium-screenshot-97.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210125 18:21:58.642" endtime="20210125 18:21:59.217"></status>
+</kw>
+<msg timestamp="20210125 18:21:59.219" level="FAIL">Element with locator '//span[contains(@class,'style__close___1l-EN')]/*' not found.</msg>
+<status status="FAIL" starttime="20210125 18:21:28.604" endtime="20210125 18:21:59.219"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:21:28.603" endtime="20210125 18:21:59.220"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:21:28.603" endtime="20210125 18:21:59.222"></status>
+</kw>
+<kw name="click on add" library="NextPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:21:59.223" level="INFO">Clicking element '//div[text()='ADD']'.</msg>
+<status status="PASS" starttime="20210125 18:21:59.223" endtime="20210125 18:22:00.501"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:21:59.222" endtime="20210125 18:22:00.502"></status>
+</kw>
+<kw name="click on proceed" library="NextPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PROCEED_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20210125 18:22:00.506" level="INFO">Clicking element '//div[contains(@class,'CartCounter__cart-img___3xOz1 CartCounter__cart-black___RXZ58')]'.</msg>
+<status status="PASS" starttime="20210125 18:22:00.506" endtime="20210125 18:22:11.697"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:22:00.502" endtime="20210125 18:22:11.698"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>//span[text()='CHECKOUT']</arg>
+</arguments>
+<assign>
+<var>${ele}</var>
+</assign>
+<msg timestamp="20210125 18:22:11.868" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c300a4f6e8fc2bed8667202a2b9b54c9", element="677d57af-cd9c-4e47-9172-75eb06cb4828")&gt;</msg>
+<status status="PASS" starttime="20210125 18:22:11.698" endtime="20210125 18:22:11.869"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20210125 18:22:11.870" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="c300a4f6e8fc2bed8667202a2b9b54c9", element="677d57af-cd9c-4e47-9172-75eb06cb4828")&gt;'</msg>
+<status status="PASS" starttime="20210125 18:22:11.869" endtime="20210125 18:22:12.881"></status>
+</kw>
+<kw name="End Browser" library="common_functionality" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210125 18:22:13.308" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-98.png"&gt;&lt;img src="screenshot/selenium-screenshot-98.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210125 18:22:12.883" endtime="20210125 18:22:13.309"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210125 18:22:13.309" endtime="20210125 18:22:16.481"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:22:12.882" endtime="20210125 18:22:16.482"></status>
+</kw>
+<status status="PASS" starttime="20210125 18:18:32.557" endtime="20210125 18:22:16.482" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210125 18:18:32.136" endtime="20210125 18:22:16.483"></status>
+</suite>
+<status status="PASS" starttime="20210125 18:18:32.074" endtime="20210125 18:22:16.487"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="1mg Project">1mg Project</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Validation Suite">1mg Project.Validation Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
